@@ -1,7 +1,8 @@
 $(function() {
   function buildHTML(message){
 
-    var image = message.image == null ? "" : `<img src="${message.image}" class="lower-message__image">`
+    var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
+
   
               
     var html = `<div class ="message">
@@ -39,10 +40,10 @@ $("#new_message").on('submit', function(e) {
   })
   .done(function(data){
     var html = buildHTML(data);
-    $('.messages').append(html);
-    $('.form__message').val('');
+    $('.messages').append(html); 
     $('.form__submit').prop('disabled', false);
     $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+    $('.new_message')[0].reset();
   })
   .fail(function(){
     alert('error')
