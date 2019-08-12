@@ -4,7 +4,6 @@ $(function() {
     var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
 
 
-
     var html = `<div class ="message">
                   <div class ="upper-message">
                     <div class ="upper-message__user_name">
@@ -23,7 +22,9 @@ $(function() {
                 </div>`                           
     return html;
 
+     
   }
+         
 
 
 $("#new_message").on('submit', function(e) { 
