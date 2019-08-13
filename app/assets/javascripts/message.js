@@ -1,7 +1,7 @@
 $(function() {
   function buildHTML(message){
   
-    var image = message.image.url ? `<img class="lower-message__image" src=${message.image.url}>` : "";
+    var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
 
 
     var html = `<div class ="message" data-message-id="${message.id}">
