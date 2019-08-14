@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'odaj'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bucket'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/odaj'
 end
